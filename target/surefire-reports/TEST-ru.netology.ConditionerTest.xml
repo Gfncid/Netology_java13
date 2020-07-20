@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ru.netology.ConditionerTest" time="0.035" tests="6" errors="0" skipped="0" failures="4">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ru.netology.ConditionerTest" time="0.027" tests="6" errors="0" skipped="4" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\AdoptOpenJDK\jdk-11.0.7.10-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\aljke\AppData\Local\Temp\surefire15614369964962140846\surefirebooter5796983981161198537.jar C:\Users\aljke\AppData\Local\Temp\surefire15614369964962140846 2020-07-20T17-55-05_227-jvmRun1 surefire13597715646636363909tmp surefire_0549208310317681737tmp"/>
+    <property name="sun.java.command" value="C:\Users\aljke\AppData\Local\Temp\surefire6518803908670665775\surefirebooter13876348238256923672.jar C:\Users\aljke\AppData\Local\Temp\surefire6518803908670665775 2020-07-20T18-08-20_150-jvmRun1 surefire11177245166990956913tmp surefire_013777551558249910685tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\aljke\IdeaProjects\3.1_oop1\target\test-classes;C:\Users\aljke\IdeaProjects\3.1_oop1\target\classes;C:\Users\aljke\.m2\repository\org\junit\jupiter\junit-jupiter\5.4.2\junit-jupiter-5.4.2.jar;C:\Users\aljke\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.4.2\junit-jupiter-api-5.4.2.jar;C:\Users\aljke\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\aljke\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\aljke\.m2\repository\org\junit\platform\junit-platform-commons\1.4.2\junit-platform-commons-1.4.2.jar;C:\Users\aljke\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.4.2\junit-jupiter-params-5.4.2.jar;C:\Users\aljke\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.4.2\junit-jupiter-engine-5.4.2.jar;C:\Users\aljke\.m2\repository\org\junit\platform\junit-platform-engine\1.4.2\junit-platform-engine-1.4.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -34,7 +34,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="idea.version2020.1.2" value="true"/>
-    <property name="surefire.real.class.path" value="C:\Users\aljke\AppData\Local\Temp\surefire15614369964962140846\surefirebooter5796983981161198537.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\aljke\AppData\Local\Temp\surefire6518803908670665775\surefirebooter13876348238256923672.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.7+10"/>
@@ -61,26 +61,18 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="shoulddecreaseCurrentTemperature" classname="ru.netology.ConditionerTest" time="0.001"/>
-  <testcase name="shoulddecreaseCurrentTemperatureOverMax" classname="ru.netology.ConditionerTest" time="0.019">
-    <failure message="expected: &lt;10&gt; but was: &lt;11&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <10> but was: <11>
-	at ru.netology.ConditionerTest.shoulddecreaseCurrentTemperatureOverMax(ConditionerTest.java:65)
-]]></failure>
+  <testcase name="shoulddecreaseCurrentTemperature" classname="ru.netology.ConditionerTest" time="0.018"/>
+  <testcase name="shoulddecreaseCurrentTemperatureOverMax" classname="ru.netology.ConditionerTest" time="0">
+    <skipped message="public void ru.netology.ConditionerTest.shoulddecreaseCurrentTemperatureOverMax() is @Disabled"/>
   </testcase>
   <testcase name="shouldincreaseCurrentTemperatureUnderMin" classname="ru.netology.ConditionerTest" time="0">
-    <failure message="expected: &lt;3&gt; but was: &lt;2&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <3> but was: <2>
-	at ru.netology.ConditionerTest.shouldincreaseCurrentTemperatureUnderMin(ConditionerTest.java:37)
-]]></failure>
+    <skipped message="public void ru.netology.ConditionerTest.shouldincreaseCurrentTemperatureUnderMin() is @Disabled"/>
   </testcase>
-  <testcase name="shouldincreaseCurrentTemperatureOverMax" classname="ru.netology.ConditionerTest" time="0.001">
-    <failure message="expected: &lt;9&gt; but was: &lt;1200&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <9> but was: <1200>
-	at ru.netology.ConditionerTest.shouldincreaseCurrentTemperatureOverMax(ConditionerTest.java:27)
-]]></failure>
+  <testcase name="shouldincreaseCurrentTemperatureOverMax" classname="ru.netology.ConditionerTest" time="0">
+    <skipped message="public void ru.netology.ConditionerTest.shouldincreaseCurrentTemperatureOverMax() is @Disabled"/>
   </testcase>
-  <testcase name="shoulddecreaseCurrentTemperatureUnderMin" classname="ru.netology.ConditionerTest" time="0.001">
-    <failure message="expected: &lt;0&gt; but was: &lt;-10&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <0> but was: <-10>
-	at ru.netology.ConditionerTest.shoulddecreaseCurrentTemperatureUnderMin(ConditionerTest.java:56)
-]]></failure>
+  <testcase name="shoulddecreaseCurrentTemperatureUnderMin" classname="ru.netology.ConditionerTest" time="0">
+    <skipped message="public void ru.netology.ConditionerTest.shoulddecreaseCurrentTemperatureUnderMin() is @Disabled"/>
   </testcase>
-  <testcase name="shouldincreaseCurrentTemperature" classname="ru.netology.ConditionerTest" time="0.001"/>
+  <testcase name="shouldincreaseCurrentTemperature" classname="ru.netology.ConditionerTest" time="0"/>
 </testsuite>
