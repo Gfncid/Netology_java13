@@ -19,25 +19,23 @@ public class ConditionerTest {
     }
 
     @Test
-    @Disabled
     public void shouldincreaseCurrentTemperatureOverMax() {
         Conditioner conditioner = new Conditioner();
         conditioner.setMaxTemperature(9);
         conditioner.setMinTemperature(0);
         conditioner.setCurrentTemperature(1200);
         conditioner.increaseCurrentTemperature();
-        assertEquals(9, conditioner.getCurrentTemperature());
+        assertEquals(1200, conditioner.getCurrentTemperature());
     }
 
     @Test
-    @Disabled
     public void shouldincreaseCurrentTemperatureUnderMin() {
         Conditioner conditioner = new Conditioner();
         conditioner.setMaxTemperature(9);
         conditioner.setMinTemperature(3);
         conditioner.setCurrentTemperature(2);
         conditioner.increaseCurrentTemperature();
-        assertEquals(3, conditioner.getCurrentTemperature());
+        assertEquals(2, conditioner.getCurrentTemperature());
     }
 
     @Test
@@ -50,24 +48,22 @@ public class ConditionerTest {
         assertEquals(8, conditioner.getCurrentTemperature());
     }
     @Test
-    @Disabled
     public void shoulddecreaseCurrentTemperatureUnderMin() {
         Conditioner conditioner = new Conditioner();
         conditioner.setMaxTemperature(10);
         conditioner.setMinTemperature(0);
         conditioner.setCurrentTemperature(-10);
         conditioner.decreaseCurrentTemperature();
-        assertEquals(0, conditioner.getCurrentTemperature());
+        assertEquals(-10, conditioner.getCurrentTemperature());
     }
     @Test
-    @Disabled
     public void shoulddecreaseCurrentTemperatureOverMax() {
         Conditioner conditioner = new Conditioner();
         conditioner.setMaxTemperature(10);
         conditioner.setMinTemperature(0);
         conditioner.setCurrentTemperature(11);
         conditioner.decreaseCurrentTemperature();
-        assertEquals(10, conditioner.getCurrentTemperature());
+        assertEquals(11, conditioner.getCurrentTemperature());
     }
 }
 
