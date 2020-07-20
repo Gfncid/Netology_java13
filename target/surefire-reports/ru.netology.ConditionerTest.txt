@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: ru.netology.ConditionerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.035 s <<< FAILURE! - in ru.netology.ConditionerTest
+shoulddecreaseCurrentTemperatureOverMax  Time elapsed: 0.019 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <10> but was: <11>
+	at ru.netology.ConditionerTest.shoulddecreaseCurrentTemperatureOverMax(ConditionerTest.java:65)
+
+shouldincreaseCurrentTemperatureUnderMin  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <3> but was: <2>
+	at ru.netology.ConditionerTest.shouldincreaseCurrentTemperatureUnderMin(ConditionerTest.java:37)
+
+shouldincreaseCurrentTemperatureOverMax  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <9> but was: <1200>
+	at ru.netology.ConditionerTest.shouldincreaseCurrentTemperatureOverMax(ConditionerTest.java:27)
+
+shoulddecreaseCurrentTemperatureUnderMin  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <-10>
+	at ru.netology.ConditionerTest.shoulddecreaseCurrentTemperatureUnderMin(ConditionerTest.java:56)
+

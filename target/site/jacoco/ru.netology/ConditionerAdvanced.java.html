@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ConditionerAdvanced.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">smart-house</a> &gt; <a href="index.source.html" class="el_package">ru.netology</a> &gt; <span class="el_source">ConditionerAdvanced.java</span></div><h1>ConditionerAdvanced.java</h1><pre class="source lang-java linenums">package ru.netology;
+
+<span class="fc" id="L3">public class ConditionerAdvanced {</span>
+    private String name;
+    private int maxTemperature;
+    private int minTemperature;
+    private int currentTemperature;
+    private boolean on;
+
+    public String getName() {
+<span class="fc" id="L11">        return name;</span>
+    }
+
+    public void setName(String name) {
+<span class="fc" id="L15">        this.name = name;</span>
+<span class="fc" id="L16">    }</span>
+
+    public int getMaxTemperature() {
+<span class="nc" id="L19">        return maxTemperature;</span>
+    }
+
+    public void setMaxTemperature(int maxTemperature) {
+<span class="nc" id="L23">        this.maxTemperature = maxTemperature;</span>
+<span class="nc" id="L24">    }</span>
+
+    public int getMinTemperature() {
+<span class="nc" id="L27">        return minTemperature;</span>
+    }
+
+    public void setMinTemperature(int minTemperature) {
+<span class="nc" id="L31">        this.minTemperature = minTemperature;</span>
+<span class="nc" id="L32">    }</span>
+
+    public int getCurrentTemperature() {
+<span class="nc" id="L35">        return currentTemperature;</span>
+    }
+
+    public void setCurrentTemperature(int currentTemperature) {
+<span class="nc bnc" id="L39" title="All 2 branches missed.">        if (currentTemperature &gt; maxTemperature) {</span>
+<span class="nc" id="L40">            return;</span>
+        }
+<span class="nc bnc" id="L42" title="All 2 branches missed.">        if (currentTemperature &lt; minTemperature) {</span>
+<span class="nc" id="L43">            return;</span>
+        }
+        // здесь уверены, что все проверки прошли
+<span class="nc" id="L46">        this.currentTemperature = currentTemperature;</span>
+<span class="nc" id="L47">    }</span>
+
+//    public void setCurrentTemperature(int currentTemperature) {
+//        if (currentTemperature &lt;= maxTemperature) {
+//            if (currentTemperature &gt;= minTemperature) {
+//                this.currentTemperature = currentTemperature;
+//            }
+//        }
+//    }
+
+    public boolean isOn() {
+<span class="nc" id="L58">        return on;</span>
+    }
+
+    public void setOn(boolean on) {
+<span class="nc" id="L62">        this.on = on;</span>
+<span class="nc" id="L63">    }</span>
+}
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
