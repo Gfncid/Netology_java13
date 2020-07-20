@@ -1,20 +1,20 @@
 package ru.netology;
 
 public class Radio {
-    private int Volume;
+    private int volume;
     private int maxVolume;
     private int minVolume;
-    private int Station;
+    private int station;
     private int firstStation;
     private int lastStation;
     private boolean on;
 
     public int getVolume() {
-        return Volume;
+        return volume;
     }
 
     public void setVolume(int volume) {
-        Volume = volume;
+        this.volume = volume;
     }
 
     public int getMaxVolume() {
@@ -34,11 +34,11 @@ public class Radio {
     }
 
     public int getStation() {
-        return Station;
+        return station;
     }
 
     public void setStation(int station) {
-        Station = station;
+        this.station = station;
     }
 
     public int getFirstStation() {
@@ -68,45 +68,45 @@ public class Radio {
 
 
     public void increaseVolume() {
-        if (Volume > maxVolume) {
+        if (volume > maxVolume) {
             return;
         }
-        if (Volume < minVolume) {
+        if (volume < minVolume) {
             return;
         }
-        this.Volume = Volume + 1;
+        this.volume = volume + 1;
     }
 
     public void decreaseVolume() {
-        if (Volume > maxVolume) {
+        if (volume > maxVolume) {
             return;
         }
-        if (Volume < minVolume) {
+        if (volume < minVolume) {
             return;
         }
-        this.Volume = Volume - 1;
+        this.volume = volume - 1;
     }
 
     public void nextStation() {
-        if (Station < firstStation) {
+        if (station < firstStation) {
             return;
         }
-        this.Station = Station + 1;
-        if (Station > lastStation) {
-            this.Station = firstStation;
+        this.station = station + 1;
+        if (station > lastStation) {
+            this.station = firstStation;
         }
 
     }
 
-        public void prevStation() {
+    public void prevStation() {
 
-            if (Station > lastStation) {
-                return;
-            }
-            this.Station = Station - 1;
-            if (Station < firstStation) {
-                this.Station = lastStation;
-            }
-
+        if (station > lastStation) {
+            return;
         }
+        this.station = station - 1;
+        if (station < firstStation) {
+            this.station = lastStation;
+        }
+
     }
+}
