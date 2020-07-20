@@ -57,21 +57,21 @@
 
 
     public void increaseCurrentTemperature() {
-<span class="fc bfc" id="L60" title="All 2 branches covered.">        if (currentTemperature &gt; maxTemperature) {</span>
-<span class="fc" id="L61">            return;</span>
+<span class="pc bpc" id="L60" title="1 of 2 branches missed.">        if (currentTemperature &gt; maxTemperature) {</span>
+<span class="nc" id="L61">            return;</span>
         }
-<span class="fc bfc" id="L63" title="All 2 branches covered.">        if (currentTemperature &lt; minTemperature) {</span>
-<span class="fc" id="L64">            return;  }</span>
+<span class="pc bpc" id="L63" title="1 of 2 branches missed.">        if (currentTemperature &lt; minTemperature) {</span>
+<span class="nc" id="L64">            return;  }</span>
 <span class="fc" id="L65">        this.currentTemperature = currentTemperature + 1;</span>
 
 <span class="fc" id="L67">    }</span>
 
     public void decreaseCurrentTemperature() {
-<span class="fc bfc" id="L70" title="All 2 branches covered.">        if (currentTemperature &lt; minTemperature) {</span>
-<span class="fc" id="L71">            return;</span>
+<span class="pc bpc" id="L70" title="1 of 2 branches missed.">        if (currentTemperature &lt; minTemperature) {</span>
+<span class="nc" id="L71">            return;</span>
         }
-<span class="fc bfc" id="L73" title="All 2 branches covered.">        if (currentTemperature &gt; maxTemperature) {</span>
-<span class="fc" id="L74">            return;  }</span>
+<span class="pc bpc" id="L73" title="1 of 2 branches missed.">        if (currentTemperature &gt; maxTemperature) {</span>
+<span class="nc" id="L74">            return;  }</span>
 <span class="fc" id="L75">        this.currentTemperature = currentTemperature - 1;</span>
 <span class="fc" id="L76">    }</span>
 
