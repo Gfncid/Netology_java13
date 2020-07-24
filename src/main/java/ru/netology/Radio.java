@@ -14,6 +14,12 @@ public class Radio {
     }
 
     public void setVolume(int volume) {
+        if (volume > maxVolume) {
+            return;
+        }
+        if (volume < minVolume) {
+            return;
+        }
         this.volume = volume;
     }
 

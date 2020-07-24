@@ -8,6 +8,16 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ConditionerTest {
 
     @Test
+    public void shouldDoEarlyExit() {
+        Conditioner conditioner = new Conditioner();
+        conditioner.setMinTemperature(5);
+        conditioner.setMaxTemperature(10);
+        conditioner.setCurrentTemperature(111);
+        assertEquals(0, conditioner.getCurrentTemperature());
+
+    }
+
+    @Test
     public void shouldincreaseCurrentTemperature() {
         Conditioner conditioner = new Conditioner();
         conditioner.setMaxTemperature(10);
@@ -21,21 +31,21 @@ public class ConditionerTest {
     @Test
     public void shouldNotincreaseCurrentTemperatureOverMax() {
         Conditioner conditioner = new Conditioner();
-        conditioner.setMaxTemperature(9);
-        conditioner.setMinTemperature(0);
-        conditioner.setCurrentTemperature(1200);
+        conditioner.setMaxTemperature(-10);
+        conditioner.setMinTemperature(-20);
+        conditioner.setCurrentTemperature(100);
         conditioner.increaseCurrentTemperature();
-        assertEquals(1200, conditioner.getCurrentTemperature());
+        assertEquals(0, conditioner.getCurrentTemperature());
     }
 
     @Test
     public void shouldNotincreaseCurrentTemperatureUnderMin() {
         Conditioner conditioner = new Conditioner();
-        conditioner.setMaxTemperature(9);
-        conditioner.setMinTemperature(3);
-        conditioner.setCurrentTemperature(2);
+        conditioner.setMaxTemperature(5);
+        conditioner.setMinTemperature(2);
+        conditioner.setCurrentTemperature(0);
         conditioner.increaseCurrentTemperature();
-        assertEquals(2, conditioner.getCurrentTemperature());
+        assertEquals(0, conditioner.getCurrentTemperature());
     }
 
     @Test
@@ -51,21 +61,22 @@ public class ConditionerTest {
     @Test
     public void shouldNotdecreaseCurrentTemperatureUnderMin() {
         Conditioner conditioner = new Conditioner();
-        conditioner.setMaxTemperature(10);
-        conditioner.setMinTemperature(0);
-        conditioner.setCurrentTemperature(-10);
+        conditioner.setMaxTemperature(4);
+        conditioner.setMinTemperature(2);
+        conditioner.setCurrentTemperature(0);
         conditioner.decreaseCurrentTemperature();
-        assertEquals(-10, conditioner.getCurrentTemperature());
+        assertEquals(0, conditioner.getCurrentTemperature());
     }
 
     @Test
     public void shouldNotdecreaseCurrentTemperatureOverMax() {
         Conditioner conditioner = new Conditioner();
-        conditioner.setMaxTemperature(10);
-        conditioner.setMinTemperature(0);
-        conditioner.setCurrentTemperature(11);
+        conditioner.setMaxTemperature(-1);
+        conditioner.setMinTemperature(-100);
+        conditioner.setCurrentTemperature(100);
         conditioner.decreaseCurrentTemperature();
-        assertEquals(11, conditioner.getCurrentTemperature());
+        assertEquals(0, conditioner.getCurrentTemperature());
     }
 }
+
 

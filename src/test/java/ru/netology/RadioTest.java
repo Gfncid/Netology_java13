@@ -19,21 +19,21 @@ class RadioTest {
     @Test
     public void shouldNotincreaseVolumeOverMax() {
         Radio radio = new Radio();
-        radio.setMaxVolume(10);
-        radio.setMinVolume(0);
-        radio.setVolume(11);
+        radio.setMaxVolume(-1);
+        radio.setMinVolume(-10);
+        radio.setVolume(100);
         radio.increaseVolume();
-        assertEquals(11, radio.getVolume());
+        assertEquals(0, radio.getVolume());
     }
 
     @Test
     public void shouldNotincreaseVolumeUnderMin() {
         Radio radio = new Radio();
         radio.setMaxVolume(10);
-        radio.setMinVolume(0);
-        radio.setVolume(-1);
+        radio.setMinVolume(3);
+        radio.setVolume(-123);
         radio.increaseVolume();
-        assertEquals(-1, radio.getVolume());
+        assertEquals(0, radio.getVolume());
     }
 
 
@@ -52,21 +52,21 @@ class RadioTest {
     public void shouldNotdecreaseVolumeUnderMin() {
         Radio radio = new Radio();
         radio.setMaxVolume(10);
-        radio.setMinVolume(0);
-        radio.setVolume(-1);
+        radio.setMinVolume(1);
+        radio.setVolume(-12);
         radio.decreaseVolume();
-        assertEquals(-1, radio.getVolume());
+        assertEquals(0, radio.getVolume());
 
     }
 
     @Test
     public void shouldNotdecreaseVolumeOverMax() {
         Radio radio = new Radio();
-        radio.setMaxVolume(10);
-        radio.setMinVolume(0);
+        radio.setMaxVolume(-1);
+        radio.setMinVolume(-2);
         radio.setVolume(11);
         radio.decreaseVolume();
-        assertEquals(11, radio.getVolume());
+        assertEquals(0, radio.getVolume());
 
     }
 
@@ -112,7 +112,7 @@ class RadioTest {
     }
 
     @Test
-    public void shouldChangeToLastStationAfterFirst() {
+    public void shouldChangeToLastStationBeforeFirst() {
         Radio radio = new Radio();
         radio.setFirstStation(0);
         radio.setLastStation(9);
