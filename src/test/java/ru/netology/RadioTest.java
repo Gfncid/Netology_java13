@@ -36,6 +36,15 @@ class RadioTest {
         assertEquals(0, radio.getVolume());
     }
 
+    @Test
+    public void shouldNotincreaseVolumeEqualMax() {
+        Radio radio = new Radio();
+        radio.setMaxVolume(10);
+        radio.setMinVolume(3);
+        radio.setVolume(10);
+        radio.increaseVolume();
+        assertEquals(10, radio.getVolume());
+    }
 
     @Test
     public void shoulddecreaseVolume() {
@@ -71,6 +80,19 @@ class RadioTest {
     }
 
     @Test
+    public void shouldNotdecreaseVolumeEqualMin() {
+        Radio radio = new Radio();
+        radio.setMaxVolume(10);
+        radio.setMinVolume(3);
+        radio.setVolume(3);
+        radio.decreaseVolume();
+        assertEquals(3, radio.getVolume());
+
+    }
+
+
+
+    @Test
     public void shouldChangeToNextStation() {
         Radio radio = new Radio();
         radio.setFirstStation(0);
@@ -93,11 +115,11 @@ class RadioTest {
     @Test
     public void shouldReturn() {
         Radio radio = new Radio();
-        radio.setFirstStation(0);
+        radio.setFirstStation(4);
         radio.setLastStation(9);
-        radio.setStation(-3);
+        radio.setStation(3);
         radio.nextStation();
-        assertEquals(-3, radio.getStation());
+        assertEquals(3, radio.getStation());
     }
 
 

@@ -22,9 +22,9 @@ public class ConditionerTest {
         Conditioner conditioner = new Conditioner();
         conditioner.setMaxTemperature(10);
         conditioner.setMinTemperature(0);
-        conditioner.setCurrentTemperature(9);
+        conditioner.setCurrentTemperature(6);
         conditioner.increaseCurrentTemperature();
-        assertEquals(10, conditioner.getCurrentTemperature());
+        assertEquals(7, conditioner.getCurrentTemperature());
 
     }
 
@@ -49,13 +49,23 @@ public class ConditionerTest {
     }
 
     @Test
+    public void shouldNotincreaseCurrentTemperatureEqualMax() {
+        Conditioner conditioner = new Conditioner();
+        conditioner.setMaxTemperature(5);
+        conditioner.setMinTemperature(2);
+        conditioner.setCurrentTemperature(5);
+        conditioner.increaseCurrentTemperature();
+        assertEquals(5, conditioner.getCurrentTemperature());
+    }
+
+    @Test
     public void shoulddecreaseCurrentTemperature() {
         Conditioner conditioner = new Conditioner();
         conditioner.setMaxTemperature(10);
         conditioner.setMinTemperature(0);
-        conditioner.setCurrentTemperature(9);
+        conditioner.setCurrentTemperature(2);
         conditioner.decreaseCurrentTemperature();
-        assertEquals(8, conditioner.getCurrentTemperature());
+        assertEquals(1, conditioner.getCurrentTemperature());
     }
 
     @Test
@@ -74,6 +84,15 @@ public class ConditionerTest {
         conditioner.setMaxTemperature(-1);
         conditioner.setMinTemperature(-100);
         conditioner.setCurrentTemperature(100);
+        conditioner.decreaseCurrentTemperature();
+        assertEquals(0, conditioner.getCurrentTemperature());
+    }
+    @Test
+    public void shouldNotdecreaseCurrentTemperatureEqualMin() {
+        Conditioner conditioner = new Conditioner();
+        conditioner.setMaxTemperature(5);
+        conditioner.setMinTemperature(0);
+        conditioner.setCurrentTemperature(0);
         conditioner.decreaseCurrentTemperature();
         assertEquals(0, conditioner.getCurrentTemperature());
     }

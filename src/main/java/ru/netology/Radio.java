@@ -81,6 +81,10 @@ public class Radio {
             return;
         }
         this.volume = volume + 1;
+        if (volume >= maxVolume) {
+            this.volume = maxVolume;
+        }
+
     }
 
     public void decreaseVolume() {
@@ -91,7 +95,12 @@ public class Radio {
             return;
         }
         this.volume = volume - 1;
+        if (volume <= minVolume) {
+            this.volume = minVolume;
+        }
     }
+
+
 
     public void nextStation() {
         if (station < firstStation) {
