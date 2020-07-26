@@ -44,6 +44,12 @@ public class Radio {
     }
 
     public void setStation(int station) {
+        if (station < firstStation) {
+            return;
+        }
+        if (station > lastStation) {
+            return;
+        }
         this.station = station;
     }
 

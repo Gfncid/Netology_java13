@@ -44,85 +44,91 @@
     }
 
     public void setStation(int station) {
-<span class="fc" id="L47">        this.station = station;</span>
-<span class="fc" id="L48">    }</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">        if (station &lt; firstStation) {</span>
+<span class="fc" id="L48">            return;</span>
+        }
+<span class="fc bfc" id="L50" title="All 2 branches covered.">        if (station &gt; lastStation) {</span>
+<span class="fc" id="L51">            return;</span>
+        }
+<span class="fc" id="L53">        this.station = station;</span>
+<span class="fc" id="L54">    }</span>
 
     public int getFirstStation() {
-<span class="nc" id="L51">        return firstStation;</span>
+<span class="nc" id="L57">        return firstStation;</span>
     }
 
     public void setFirstStation(int firstStation) {
-<span class="fc" id="L55">        this.firstStation = firstStation;</span>
-<span class="fc" id="L56">    }</span>
+<span class="fc" id="L61">        this.firstStation = firstStation;</span>
+<span class="fc" id="L62">    }</span>
 
     public int getLastStation() {
-<span class="nc" id="L59">        return lastStation;</span>
+<span class="nc" id="L65">        return lastStation;</span>
     }
 
     public void setLastStation(int lastStation) {
-<span class="fc" id="L63">        this.lastStation = lastStation;</span>
-<span class="fc" id="L64">    }</span>
+<span class="fc" id="L69">        this.lastStation = lastStation;</span>
+<span class="fc" id="L70">    }</span>
 
 
     public boolean isOn() {
-<span class="nc" id="L68">        return on;</span>
+<span class="nc" id="L74">        return on;</span>
     }
 
     public void setOn(boolean on) {
-<span class="nc" id="L72">        this.on = on;</span>
-<span class="nc" id="L73">    }</span>
+<span class="nc" id="L78">        this.on = on;</span>
+<span class="nc" id="L79">    }</span>
 
 
     public void increaseVolume() {
-<span class="fc bfc" id="L77" title="All 2 branches covered.">        if (volume &gt; maxVolume) {</span>
-<span class="fc" id="L78">            return;</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">        if (volume &gt; maxVolume) {</span>
+<span class="fc" id="L84">            return;</span>
         }
-<span class="fc bfc" id="L80" title="All 2 branches covered.">        if (volume &lt; minVolume) {</span>
-<span class="fc" id="L81">            return;</span>
+<span class="fc bfc" id="L86" title="All 2 branches covered.">        if (volume &lt; minVolume) {</span>
+<span class="fc" id="L87">            return;</span>
         }
-<span class="fc" id="L83">        this.volume = volume + 1;</span>
-<span class="fc bfc" id="L84" title="All 2 branches covered.">        if (volume &gt;= maxVolume) {</span>
-<span class="fc" id="L85">            this.volume = maxVolume;</span>
+<span class="fc" id="L89">        this.volume = volume + 1;</span>
+<span class="fc bfc" id="L90" title="All 2 branches covered.">        if (volume &gt;= maxVolume) {</span>
+<span class="fc" id="L91">            this.volume = maxVolume;</span>
         }
 
-<span class="fc" id="L88">    }</span>
+<span class="fc" id="L94">    }</span>
 
     public void decreaseVolume() {
-<span class="fc bfc" id="L91" title="All 2 branches covered.">        if (volume &gt; maxVolume) {</span>
-<span class="fc" id="L92">            return;</span>
+<span class="fc bfc" id="L97" title="All 2 branches covered.">        if (volume &gt; maxVolume) {</span>
+<span class="fc" id="L98">            return;</span>
         }
-<span class="fc bfc" id="L94" title="All 2 branches covered.">        if (volume &lt; minVolume) {</span>
-<span class="fc" id="L95">            return;</span>
+<span class="fc bfc" id="L100" title="All 2 branches covered.">        if (volume &lt; minVolume) {</span>
+<span class="fc" id="L101">            return;</span>
         }
-<span class="fc" id="L97">        this.volume = volume - 1;</span>
-<span class="fc bfc" id="L98" title="All 2 branches covered.">        if (volume &lt;= minVolume) {</span>
-<span class="fc" id="L99">            this.volume = minVolume;</span>
+<span class="fc" id="L103">        this.volume = volume - 1;</span>
+<span class="fc bfc" id="L104" title="All 2 branches covered.">        if (volume &lt;= minVolume) {</span>
+<span class="fc" id="L105">            this.volume = minVolume;</span>
         }
-<span class="fc" id="L101">    }</span>
+<span class="fc" id="L107">    }</span>
 
 
 
     public void nextStation() {
-<span class="fc bfc" id="L106" title="All 2 branches covered.">        if (station &lt; firstStation) {</span>
-<span class="fc" id="L107">            return;</span>
+<span class="fc bfc" id="L112" title="All 2 branches covered.">        if (station &lt; firstStation) {</span>
+<span class="fc" id="L113">            return;</span>
         }
-<span class="fc" id="L109">        this.station = station + 1;</span>
-<span class="fc bfc" id="L110" title="All 2 branches covered.">        if (station &gt; lastStation) {</span>
-<span class="fc" id="L111">            this.station = firstStation;</span>
+<span class="fc" id="L115">        this.station = station + 1;</span>
+<span class="fc bfc" id="L116" title="All 2 branches covered.">        if (station &gt; lastStation) {</span>
+<span class="fc" id="L117">            this.station = firstStation;</span>
         }
 
-<span class="fc" id="L114">    }</span>
+<span class="fc" id="L120">    }</span>
 
     public void prevStation() {
 
-<span class="fc bfc" id="L118" title="All 2 branches covered.">        if (station &gt; lastStation) {</span>
-<span class="fc" id="L119">            return;</span>
+<span class="fc bfc" id="L124" title="All 2 branches covered.">        if (station &gt; lastStation) {</span>
+<span class="fc" id="L125">            return;</span>
         }
-<span class="fc" id="L121">        this.station = station - 1;</span>
-<span class="fc bfc" id="L122" title="All 2 branches covered.">        if (station &lt; firstStation) {</span>
-<span class="fc" id="L123">            this.station = lastStation;</span>
+<span class="fc" id="L127">        this.station = station - 1;</span>
+<span class="fc bfc" id="L128" title="All 2 branches covered.">        if (station &lt; firstStation) {</span>
+<span class="fc" id="L129">            this.station = lastStation;</span>
         }
 
-<span class="fc" id="L126">    }</span>
+<span class="fc" id="L132">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

@@ -119,7 +119,7 @@ class RadioTest {
         radio.setLastStation(9);
         radio.setStation(3);
         radio.nextStation();
-        assertEquals(3, radio.getStation());
+        assertEquals(0, radio.getStation());
     }
 
 
@@ -146,11 +146,11 @@ class RadioTest {
     @Test
     public void shouldReturn2() {
         Radio radio = new Radio();
-        radio.setFirstStation(0);
-        radio.setLastStation(9);
-        radio.setStation(15);
+        radio.setFirstStation(-10);
+        radio.setLastStation(-1);
+        radio.setStation(10);
         radio.prevStation();
-        assertEquals(15, radio.getStation());
+        assertEquals(0, radio.getStation());
     }
 
 }
