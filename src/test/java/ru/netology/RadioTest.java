@@ -67,13 +67,6 @@ class RadioTest {
     }
 
 
-
-
-
-
-
-
-
     @Test
     public void shouldChangeToNextStation() {
         Radio radio = new Radio(6, 10);
@@ -98,14 +91,14 @@ class RadioTest {
 
     @Test
     public void shouldChangeToPrevStation() {
-        Radio radio = new Radio(4,10);
+        Radio radio = new Radio(4, 10);
         radio.prevStation();
         assertEquals(3, radio.getStation());
     }
 
     @Test
     public void shouldChangeToLastStationBeforeFirst() {
-        Radio radio = new Radio(0,11);
+        Radio radio = new Radio(0, 11);
         radio.prevStation();
         assertEquals(11, radio.getStation());
     }

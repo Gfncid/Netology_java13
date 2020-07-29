@@ -1,5 +1,14 @@
 package ru.netology;
 
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+
 public class Radio {
     private int volume;
     private int maxVolume = 100;
@@ -17,76 +26,6 @@ public class Radio {
         this.station = station;
         this.lastStation = lastStation;
     }
-
-    public int getVolume() {
-        return volume;
-    }
-
-    public void setVolume(int volume) {
-        if (volume > maxVolume) {
-            return;
-        }
-        if (volume < minVolume) {
-            return;
-        }
-        this.volume = volume;
-    }
-
-    public int getMaxVolume() {
-        return maxVolume;
-    }
-
-    public void setMaxVolume(int maxVolume) {
-        this.maxVolume = maxVolume;
-    }
-
-    public int getMinVolume() {
-        return minVolume;
-    }
-
-    public void setMinVolume(int minVolume) {
-        this.minVolume = minVolume;
-    }
-
-    public int getStation() {
-        return station;
-    }
-
-    public void setStation(int station) {
-        if (station < firstStation) {
-            return;
-        }
-        if (station > lastStation) {
-            return;
-        }
-        this.station = station;
-    }
-
-    public int getFirstStation() {
-        return firstStation;
-    }
-
-    public void setFirstStation(int firstStation) {
-        this.firstStation = firstStation;
-    }
-
-    public int getLastStation() {
-        return lastStation;
-    }
-
-    public void setLastStation(int lastStation) {
-        this.lastStation = lastStation;
-    }
-
-
-    public boolean isOn() {
-        return on;
-    }
-
-    public void setOn(boolean on) {
-        this.on = on;
-    }
-
 
     public void increaseVolume() {
         this.volume = volume + 1;
@@ -107,10 +46,7 @@ public class Radio {
         if (volume <= minVolume) {
             this.volume = minVolume;
         }
-
     }
-
-
 
     public void nextStation() {
         this.station = station + 1;
