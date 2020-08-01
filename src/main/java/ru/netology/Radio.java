@@ -26,8 +26,15 @@ public class Radio {
     }
 
     public void setVolume(int volume) {
+        if (volume > maxVolume) {
+            return;
+        }
+        if (volume < minVolume) {
+            return;
+        }
         this.volume = volume;
     }
+
 
     public int getMaxVolume() {
         return maxVolume;
@@ -50,6 +57,12 @@ public class Radio {
     }
 
     public void setStation(int station) {
+        if (station < firstStation) {
+            return;
+        }
+        if (station > lastStation) {
+            return;
+        }
         this.station = station;
     }
 

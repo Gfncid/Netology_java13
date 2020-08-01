@@ -110,4 +110,52 @@ class RadioTest {
         assertEquals(13, radio.getStation());
     }
 
+    @Test
+    public void shouldReturnVolumeOverMax() {
+        Radio radio = new Radio();
+        radio.setVolume(133);
+        assertEquals(0, radio.getVolume());
+    }
+
+    @Test
+    public void shouldReturnVolumeUnderMin() {
+        Radio radio = new Radio();
+        radio.setVolume(-100);
+        assertEquals(0, radio.getVolume());
+    }
+
+    @Test
+    public void shouldReturnStationOverLast() {
+        Radio radio = new Radio();
+        radio.setStation(133);
+        radio.setLastStation(10);
+        assertEquals(0, radio.getStation());
+
+    }
+
+    @Test
+    public void shouldReturnStationUnderFirst() {
+        Radio radio = new Radio();
+        radio.setStation(-100);
+        radio.setLastStation(10);
+        assertEquals(0, radio.getStation());
+
+    }
+
+    @Test
+    public void shouldSetVolume() {
+        Radio radio = new Radio();
+        radio.setVolume(3);
+        assertEquals(3, radio.getVolume());
+
+    }
+    @Test
+    public void shouldSetStation() {
+        Radio radio = new Radio();
+        radio.setLastStation(7);
+        radio.setFirstStation(1);
+        radio.setStation(3);
+        assertEquals(3, radio.getStation());
+
+    }
 }
